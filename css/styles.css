@@ -26,6 +26,8 @@
 
 	--secondary-shadow: 0px 3px 1px 0px rgba(0, 0, 0, 0.1), 0px 2px 1px 0px rgba(0, 0, 0, 0.08),
 		0px 2px 2px 0px rgba(0, 0, 0, 0.12);
+
+	--button-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
 /* #region Base */
@@ -116,6 +118,7 @@ button {
 	min-width: 169px;
 	min-height: 56px;
 	padding: 16px 32px;
+	font-family: var(--primary-font);
 	font-weight: 500;
 	line-height: 1.5;
 	letter-spacing: 0.04em;
@@ -123,6 +126,11 @@ button {
 	background: var(--IRIS);
 	border-radius: var(--br-sm);
 	transition: background-color var(--transition), box-shadow var(--transition);
+}
+.button:hover,
+.button:focus {
+	background: var(--OCEAN);
+	box-shadow: var(--button-shadow);
 }
 
 .logo {
@@ -144,6 +152,11 @@ button {
 .header {
 	display: flex;
 	align-items: center;
+	border-bottom: 1px solid var(--CLOUD);
+	border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
+	background: var(--WHITE, #fff);
+	box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+		0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 
 .header .container {
@@ -277,6 +290,10 @@ button {
 	background: var(--OCEAN);
 }
 
+.footer-socials-list {
+	gap: 16px;
+}
+
 .footer-socials-list .footer-socials-link:hover,
 .footer-socials-list .footer-socials-link:focus {
 	background: var(--GREEN-HOVER);
@@ -290,7 +307,7 @@ button {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	gap: 16px;
+	gap: 24px;
 }
 
 .socials-item {
@@ -333,17 +350,30 @@ button {
 .feature-item {
 }
 
+.feature-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 112px;
+	background-color: var(--CLOUD);
+	border-radius: 4px;
+	margin-bottom: 6px;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.feature-item-logo {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .feature-item-title {
 	margin-bottom: 8px;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
 	letter-spacing: 0.02em;
-	color: var(--NAVY-BLUE);
 }
 
 .feature-item-desc {
-	line-height: 1.5;
 	letter-spacing: 0.02em;
 }
 
@@ -389,17 +419,12 @@ button {
 }
 
 .team-member-title {
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
 	letter-spacing: 0.02em;
 	text-align: center;
-	color: var(--NAVY-BLUE);
 }
 
 .team-member-position {
 	margin-bottom: 8px;
-	line-height: 1.5;
 	letter-spacing: 0.02em;
 	text-align: center;
 }
@@ -422,7 +447,7 @@ button {
 }
 .team-member-social-link:hover,
 .team-member-social-link:focus {
-	background: var(--accent-200);
+	background: var(--GREEN-HOVER);
 }
 
 .team-member-social-icon {
@@ -538,15 +563,10 @@ button {
 
 .job-title {
 	margin-bottom: 8px;
-	font-weight: 500;
-	font-size: 20px;
-	line-height: 1.2;
 	letter-spacing: 0.02em;
-	color: var(--NAVY-BLUE);
 }
 
 .job-desc {
-	line-height: 1.5;
 	letter-spacing: 0.02em;
 }
 
